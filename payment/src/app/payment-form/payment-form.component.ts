@@ -24,4 +24,9 @@ export class PaymentFormComponent {
     })
   }
 
+  onsubmit(){
+    const isFormValid = this.paymentForm.valid;
+    debugger;
+  }
+
 }
