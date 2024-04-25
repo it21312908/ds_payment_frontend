@@ -1,17 +1,30 @@
 <form [formGroup]="paymentForm" class="custom-form">
     <div class="form-row">
+
+      <div class="form-group col-md-6">
+        <label for="inputStudentID">Student ID</label>
+        <input type="text" class="form-control" id="inputStudentID" placeholder="IT21312908" formControlName="studentID">
+        <div class="text-danger" *ngIf="paymentForm.controls['studentID'].touched">required</div>
+      </div>
+
       <div class="form-group col-md-6">
         <label for="inputCourse">Course</label>
         <input type="text" class="form-control" id="inputCourse" placeholder="IT2030" formControlName="course">
+        <div class="text-danger" *ngIf="paymentForm.controls['course'].touched">required</div>
       </div>
+
       <div class="form-group col-md-6">
         <label for="inputFee">Fee</label>
         <input type="text" class="form-control" id="inputFee" placeholder="16000" formControlName="fee">
+        <div class="text-danger" *ngIf="paymentForm.controls['fee'].touched">required</div>
       </div>
+
       <div class="form-group col-md-6">
-      <label for="inputPayment">Payment Method</label>
-      <input type="text" class="form-control" id="inputPayment" placeholder="Paypal" formControlName="paymentMethod">
-    </div>
+        <label for="inputPayment">Payment Method</label>
+        <input type="text" class="form-control" id="inputPayment" placeholder="Paypal" formControlName="paymentMethod">
+        <div class="text-danger" *ngIf="paymentForm.controls['paymentMethod'].touched">required</div>
+      </div>
+
     </div>
     
     <div class="form-row">

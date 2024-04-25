@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -16,10 +16,11 @@ export class PaymentFormComponent {
 
   constructor(){
     this.paymentForm = new FormGroup({
-      course: new FormControl(""),
+      studentID: new FormControl(""),
+      course: new FormControl("", [Validators.required, Validators.minLength(6), Validators.maxLength(6)]),
       fee: new FormControl(""),
-      paymentMethod: new FormControl(""),
-      description: new FormControl("")
+      paymentMethod: new FormControl("", [Validators.required]),
+      description: new FormControl("", [Validators.required])
     })
   }
 
