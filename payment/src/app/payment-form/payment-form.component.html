@@ -1,26 +1,25 @@
-<form [formGroup]="paymentForm">
+<form [formGroup]="paymentForm" class="custom-form">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCourse">Course</label>
-        <input type="text" class="form-control" id="inputCourse" placeholder="Email" formControlName="course">
+        <input type="text" class="form-control" id="inputCourse" placeholder="IT2030" formControlName="course">
       </div>
       <div class="form-group col-md-6">
         <label for="inputFee">Fee</label>
-        <input type="text" class="form-control" id="inputFee" placeholder="Fee" formControlName="fee">
+        <input type="text" class="form-control" id="inputFee" placeholder="16000" formControlName="fee">
       </div>
-    </div>
-    <div class="form-group">
+      <div class="form-group col-md-6">
       <label for="inputPayment">Payment Method</label>
       <input type="text" class="form-control" id="inputPayment" placeholder="Paypal" formControlName="paymentMethod">
     </div>
+    </div>
+    
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputDescription">Description</label>
-        <input type="text" class="form-control" id="inputDescription" formControlName="description">
+        <textarea class="form-control resizable-textarea" id="inputDescription" formControlName="description"></textarea>
       </div>
       
     </div>
     <button type="submit" class="btn btn-primary">Continue to Chekout</button>
   </form>
-
-  <!-- <button [routerLink]="['/payment']">payment</button> -->
